@@ -1,0 +1,24 @@
+<div class="game">
+    <div class="playing-player" *ngIf="winingPlayer === ''"> {{playingPlayer.name}} Turn ({{playingPlayer.sign}}) !! </div>
+    <div class="playing-player" *ngIf="winingPlayer !== ''"> {{winingPlayer}} Won !! </div>
+
+    <div class="scores">
+            <div class="player-score">{{player1.name}} Score:
+                 <div>{{player1.score}}</div>
+            </div>
+            <div class="player-score"> {{player2.name}} Score:
+                <div>{{player2.score}}</div>
+            </div>
+    </div>
+    <div class="game-table">
+        <mat-grid-list cols="3" rowHeight="2:1">
+            <div *ngFor="let cell of table, let i=index">
+                <mat-grid-tile [ngClass]="winingPlayer !== '' || table[i] !== '' ? 'disable' : ''" (click)="Play(i)">{{cell}}</mat-grid-tile>
+            </div>
+        </mat-grid-list>
+    </div>
+    <div>
+        <button class="play-again-button" (click)="onPlayAgainClick()"> Play again</button>
+        <button class="play-again-button" (click)="onPlayAgainClick()" routerLink="/home"> Back</button>
+    </div>
+</div>

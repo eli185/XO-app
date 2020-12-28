@@ -1,0 +1,59 @@
+:root {
+  --main-color: white;
+  --font-color: black;
+  --button-color: lightblue;
+}
+
+
+  .home-title {
+    text-align: center;
+    font-size: 50px;
+    color: var(--font-color);
+    margin-bottom: 100px;
+    margin-top: 70px;
+  }
+
+  .game-details{
+    margin:0 auto;
+    text-align: center;
+  }
+
+  .player {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    padding: 5px;
+    border: 2px solid black;
+    background: var(--button-color);
+    margin: 50px;
+  }
+
+
+  .player-name {
+    margin:30px;
+    font-size: 20px;
+    color: var(--font-color) !important;
+  }
+
+  .play-button{
+    height: 50px;
+    width: 100px;
+    background-color: var(--button-color) !important;
+  }
+
+  .welcome{
+    margin: 30px;
+    font-size: 20px;
+    color: var(--font-color) !important;
+  }
+
+  .board-size{
+    font-size: 17px;
+    color: var(--font-color) !important;
+    margin-bottom: 10px;
+  }
+
+  .mat-select-value-text{
+    background-color: var(--main-color) !important;
+    color: var(--font-color) !important;
+  }

@@ -1,0 +1,26 @@
+<div class="home-title"> Welcome to X-0 Game !</div>
+
+<div class="game-details">
+    <div class="board-size"> Select game theme :</div>
+    <mat-form-field appearance="fill">
+        <mat-label>Theme</mat-label>
+        <mat-select [(value)]="theme" (valueChange)="changeTheme()">
+            <mat-option value="Normal"> Normal</mat-option>
+            <mat-option value="Dark Mode"> Dark Mode</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="players-details">
+  <span class="player">
+    <div class="player-name"> player 1 name:</div>
+    <input type="text" [(ngModel)]="player1Name">
+    <div class="welcome">Welcome {{player1Name}} !</div>
+  </span>
+        <span class="player">
+    <div class="player-name"> player 2 name:</div>
+     <input type="text" [(ngModel)]="player2Name">
+     <div class="welcome">Welcome {{player2Name}} !</div>
+  </span>
+    </div>
+    <Button class="play-button"   [disabled]="player1Name.length == 0 || player2Name.length == 0"  (click)="onPlayClick()"> Play </Button>
+</div>
